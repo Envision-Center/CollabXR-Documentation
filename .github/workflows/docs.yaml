@@ -2,7 +2,7 @@ name: Deploy to Pages
 
 on:
     push:
-        branches: [main, ci-testing] # branch to trigger deployment
+        branches: [main] # branch to trigger deployment
 
 jobs:
     pages:
@@ -15,5 +15,8 @@ jobs:
             pages: write
             id-token: write
         steps:
+            # Action usage: https://github.com/marketplace/actions/sphinx-to-github-pages
             - id: deployment
               uses: sphinx-notes/pages@v3
+              with:
+                  publish: true
