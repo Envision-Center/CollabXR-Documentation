@@ -1,5 +1,10 @@
-Template for the Read the Docs tutorial
+CollabXR Documentation Repository
 =======================================
+
+`CollabXR`_ is a mixed-reality classroom. See the `docs`_!
+
+.. _CollabXR: https://envision.center/collabxr
+.. _docs: https://envision-center.github.io/CollabXR-Documentation/
 
 ======
 Development
@@ -14,3 +19,11 @@ Development
 
 To build the site locally after setting up your environment:
 * On Unix: ``cd docs && make html``
+
+======
+Resources
+======
+
+* `reStructuredText Docs`_
+
+.. _reStructuredText Docs: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html

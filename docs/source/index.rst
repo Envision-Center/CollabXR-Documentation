@@ -1,4 +1,4 @@
-Welcome to Lumache's documentation!
+CollabXR Documentation
 ===================================
 
 `CollabXR`_ is a mixed-reality classroom.
