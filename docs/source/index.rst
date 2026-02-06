@@ -1,5 +1,5 @@
 CollabXR Documentation
-===================================
+==================
 
 `CollabXR`_ is a mixed-reality classroom.
 
@@ -14,5 +14,6 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   modpackager
+   modextras
+   contribution
