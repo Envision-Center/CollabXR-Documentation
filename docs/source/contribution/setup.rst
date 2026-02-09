@@ -7,6 +7,9 @@ While not required, installing these tools and adhering to code style guidelines
 DotNet
 ----------
 
+We recommended .NET SDK version 10, but anything support by .NET Standard 2.1 should be okay,
+although some tools like CSharpier may not work with older SDK versions.
+
 1. Ensure the proper `dotnet`_ version is installed: ``$ dotnet --version``
 2. In the root directory of the `CollabXR repository`_, install the dotnet tool manifest: ``$ dotnet tool restore``
 3. Install corresponding plugins for your IDE as necessary (`CSharpier plugin list`_)
