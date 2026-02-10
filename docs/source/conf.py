@@ -18,6 +18,7 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
     "sphinx_rtd_theme",
+    "sphinx_copybutton",
 ]
 
 intersphinx_mapping = {
@@ -31,8 +32,11 @@ templates_path = ["_templates"]
 # -- Options for HTML output
 
 html_theme = "sphinx_rtd_theme"
+html_logo = "../static/logo-collab.png"
+html_favicon = "../static/favicon.ico"
 
 # Optionally configure the theme: https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
+# Adding onto the theme css: https://docs.readthedocs.com/platform/stable/guides/adding-custom-css.html
 html_theme_options = {}
 
 # -- Options for EPUB output

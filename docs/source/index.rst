@@ -1,5 +1,6 @@
+########################
 CollabXR Documentation
-==================
+########################
 
 `CollabXR`_ is a mixed-reality classroom.
 
