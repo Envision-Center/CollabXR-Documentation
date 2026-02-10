@@ -1,5 +1,8 @@
 Mod Repositories
 ============
+This page is intended for end users who may want to host their own Collab mods in the cloud. While it does not require any programming knowledge, it does require an understanding of the file serving solution you choose, such as AWS.
+
+If you are interested in collaborating with the Envision Center to visualize your data for research, education, or industry, please contact us `here <https://purdue.ca1.qualtrics.com/jfe/form/SV_2b0p3gqYpaiVLGS>`_.
 
 About Mod Repositories
 ------------------------------
@@ -41,7 +44,7 @@ In the ``Code`` section, there should already be an ``index.mjs`` file. If not, 
 In this snippet, make sure to input the information for your configuration, including the Cognito information if you are using it.
 
 * ``S3BucketName``: your S3 bucket name. make sure to also replace ``my-bucket`` in the ``BaseURL``
-* ``Cognito-URL``: the base URL of your Cognito user pool, in the format of ``cognito-idp.REGION.amazonaws.com/``
+* ``CognitoURL``: the base URL of your Cognito user pool, in the format of ``cognito-idp.REGION.amazonaws.com/``
 * ``CognitoUserPool``: the ``User pool ID`` found in the overview of your Cognito user pool
 * ``CognitoClientID``: the ``Client ID`` found in the app client page of your Cognito user pool
 * ``CognitoIdentityPool``: the ``Identity pool ID`` found in the overview of your Cognito identity pool

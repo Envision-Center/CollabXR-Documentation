@@ -11,7 +11,7 @@ const baseRepoStruct = {
 
 	CognitoURL: "cognito-idp.us-east-1.amazonaws.com/",
 	CognitoUserPool: "enter-your-user-pool-id",
-	CognitoClientID: "272q6v02f9p848r427nko3vmkh",
+	CognitoClientID: "enter-your-user-pool-client-id",
 	CognitoIdentityPool: "enter-your-identity-pool-id",
 };
 
