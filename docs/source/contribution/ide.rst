@@ -12,6 +12,7 @@ Zed
 To enable formatting with CSharpier, add this to your user or project settings file.
 
 .. code-block:: json
+	:caption: manifest.json
 	:name: config-zed-csharpier
 
 	{
