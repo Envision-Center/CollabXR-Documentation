@@ -11,9 +11,6 @@ jobs:
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
-        permissions:
-            pages: write
-            id-token: write
         steps:
             # https://github.com/marketplace/actions/sphinx-to-github-pages
             - id: build-pages
