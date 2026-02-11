@@ -8,9 +8,7 @@ jobs:
     validate:
         # TODO: run on self-hosted?
         runs-on: ubuntu-latest
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
+        name: Verify Build
         steps:
             # https://github.com/marketplace/actions/sphinx-to-github-pages
             - id: build-pages
