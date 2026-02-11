@@ -10,6 +10,7 @@ Recommended setup order:
 2. :ref:`Set up DotNet runtime<section dotnet>`
 3. :ref:`Install pre-commit hooks<section pre-commit>`
 
+.. _CollabXR repository: https://github.com/Envision-Center
 .. _section gitlfs:
 
 Git LFS

@@ -1,0 +1,30 @@
+name: Verify Build
+
+on:
+    workflow_dispatch:
+    pull_request:
+
+jobs:
+    pages:
+        # TODO: run on self-hosted?
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        permissions:
+            pages: write
+            id-token: write
+        steps:
+            # https://github.com/marketplace/actions/sphinx-to-github-pages
+            - id: build-pages
+              name: Build Pages
+              uses: sphinx-notes/pages@v3
+              with:
+                  publish: false
+                  documentation_path: ./docs/source
+            # https://github.com/pre-commit/action
+            - id: verify-formatting
+              name: Check Formatting
+              uses: pre-commit/action@v3.0.1
+              with:
+                  extra_args: --all-files
