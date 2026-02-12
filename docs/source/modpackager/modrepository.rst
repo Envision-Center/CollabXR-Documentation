@@ -1,7 +1,7 @@
 .. _mod repositories:
 
 Mod Repositories
-============
+=================
 This page is intended for end users who may want to host their own Collab mods in the cloud. While it does not require any programming knowledge, it does require an understanding of the file serving solution you choose, such as AWS.
 
 If you are interested in collaborating with the Envision Center to visualize your data for research, education, or industry, please contact us `here <https://purdue.ca1.qualtrics.com/jfe/form/SV_2b0p3gqYpaiVLGS>`_.
@@ -15,6 +15,8 @@ CollabXR was designed to be used with Amazon AWS for hosting mod repositories. I
 Creating a Mod Repository with AWS
 -------------------------------------
 
+.. image:: /images/aws_flowchart.png
+
 AWS S3 Configuration
 ^^^^^^^^^^^^^^^^^^^^^^
 In AWS, navigate to S3 and click ``Create bucket``. This is where your mod Assetbundles will live. Enter a name and uncheck ``Block all public access``. Check ``I acknowledge...`` and continue with the rest of the default settings.
@@ -25,7 +27,7 @@ AWS Cognito Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 This step is optional. It will allow the Mod Packager to automatically upload Assetbundles to your S3 bucket, otherwise you will have to manually upload.
 
-In AWS, navigate to Cognito and you will see user pools and identity pools. Click ``Create user pool``. Use the default settings, check ``Email`` under sign-in identifiers and uncheck ``Enable self-registration``.
+In AWS, navigate to Cognito and you will see user pools and identity pools. Click ``Create user pool``. Select ``Single-page application (SPA)`` and name the pool. Check ``Email`` and ``Username`` under sign-in identifiers. Uncheck ``Enable self-registration`` and choose ``email`` as a required attribute for sign-up.
 
 Back in Cognito, navigate to ``Identity pools`` and click ``Create identity pool``.
 
@@ -42,6 +44,58 @@ In the ``Code`` section, there should already be an ``index.mjs`` file. If not, 
 .. literalinclude:: index.mjs
     :caption: index.mjs
     :tab-width: 4
+
+AWS Policy Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Your AWS pipeline will need 2 primary policies that must be attached to roles. Be sure to replace `my-bucket` with your S3 bucket name.
+
+One will be only for reading and listing S3, attached to a role assumed by the Lambda function.
+
+.. code-block:: json
+
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "s3:Get*",
+                    "s3:List*",
+                    "s3:Describe*",
+                    "s3-object-lambda:Get*",
+                    "s3-object-lambda:List*"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::my-bucket/*"
+                ]
+            }
+        ]
+    }
+
+The other be for uploading to S3, attached to a role used by the Cognito identity pool.
+
+.. code-block:: json
+
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "s3:Get*",
+                    "s3:List*",
+                    "s3:Describe*",
+                    "s3:Put*",
+                    "s3-object-lambda:Get*",
+                    "s3-object-lambda:List*"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::my-bucket/*",
+                ]
+            }
+        ]
+    }
+
 
 In this snippet, make sure to input the information for your configuration, including the Cognito information if you are using it.
 
