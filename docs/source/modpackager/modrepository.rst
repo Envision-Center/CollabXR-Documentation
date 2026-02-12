@@ -45,9 +45,55 @@ In the ``Code`` section, there should already be an ``index.mjs`` file. If not, 
 
 AWS Policy Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-Your AWS pipeline will need 2 primary policies that must be attached to roles. One will be only for reading and listing S3, used by the Lambda function. The other will be for uploading to S3 via the Mod Packager.
+Your AWS pipeline will need 2 primary policies that must be attached to roles. Be sure to replace `my-bucket` with your S3 bucket name.
 
--- TODO: add policy definitions here
+One will be only for reading and listing S3, attached to a role assumed by the Lambda function.
+
+.. code-block:: json
+
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "s3:Get*",
+                    "s3:List*",
+                    "s3:Describe*",
+                    "s3-object-lambda:Get*",
+                    "s3-object-lambda:List*"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::my-bucket/*"
+                ]
+            }
+        ]
+    }
+
+The other be for uploading to S3, attached to a role used by the Cognito identity pool.
+
+.. code-block:: json
+
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "s3:Get*",
+                    "s3:List*",
+                    "s3:Describe*",
+                    "s3:Put*",
+                    "s3-object-lambda:Get*",
+                    "s3-object-lambda:List*"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::my-bucket/*",
+                ]
+            }
+        ]
+    }
+
 
 In this snippet, make sure to input the information for your configuration, including the Cognito information if you are using it.
 
