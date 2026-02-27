@@ -135,20 +135,22 @@ If you intend to restrict your S3 bucket, ensure that `Block public access` is e
         ]
     }
 
-Using the role you specified in the bucket policy, create a new IAM user and navigate to `Add permissions`. Under `Attach policies directly`, attach the same policy that you used on the Lambda function. This will allow the application to read and list your S3 bucket.
+Create a new IAM user and navigate to `Add permissions`. Under `Attach policies directly`, attach the same policy that you used on the Lambda function. This will allow the application to read and list your S3 bucket.
 
 In the IAM user, navigate to `Security credentials` and `Create access key`. For the use case, choose `Other` and give it a description. Copy the access key and secret key and store these *securely*. You will not be able to view the secret key again.
 
-Please be aware that, since CollabXR is designed to be used by shared devices in an academic setting (i.e. many students and researchers sharing fleets of devices), there is currently no user identification to prevent others from viewing your repository. Once you store the secret key on your device in the next section, it will be accessible to others using that device until you remove the repository from the list.
+Please be aware that, since CollabXR is designed to be used by shared devices in an academic setting (i.e. many students and researchers sharing fleets of devices), there is currently no user identification to prevent others from loading your repository. Once you store the secret key on your device in the next section, it will be accessible to others using that device until you remove the repository from the list.
 
 Loading Your Repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is recommended to generate a QR code for your repository URL for quickly loading in headset. If your repository is authenticated, CollabXR expects the following format:
 
-`https://my-lambda-function-url.lambda-url.my-region.on.aws?access=MY_ACCESS_KEY&secret=MY_SECRET_ACCESS_KEY`
+.. code-block:: urlencoded
 
-In the CollabXR application, before connecting to a room, navigate to `Settings` and then `Mods`.
+    https://my-lambda-function-url.lambda-url.my-region.on.aws?access=MY_ACCESS_KEY&secret=MY_SECRET_KEY
+
+In the CollabXR application, before connecting to a room, navigate to `Settings` and then `Mods`. Next to the input field, select the scanning icon and scan your QR code (or input the URL manually) and click `Add repository`. The application will automatically populate the object list with any assets found in this repository.
 
 Adding AWS Mod Upload Accounts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -172,7 +174,6 @@ It requires some information to define your repository.
 * ``BaseURL`` - URL to use when fetching mods. All AssetBundles and associated metadata should be placed top-level at this location.
 * ``RepoName`` - Displayed name of the mod repository.
 * ``RepoOwner`` - Displayed name of the owner of the mod repository.
-* ``Bucket`` - ???
 * ``Mods`` - An array of mod UUIDs that can be accessed on the server.
 
 .. code-block:: json
@@ -184,7 +185,6 @@ It requires some information to define your repository.
 		"BaseURL": "https://localhost/",
 		"RepoName": "Envision Center Internal Mods",
 		"RepoOwner": "Envision Center",
-		"Bucket": "collab-mods",
 		"Mods": [
 			"0098c7d1-5a49-46ae-ac4a-e8aa3b31e1a6",
 			"02b732be-abba-421d-95ca-98386b62e81b",
@@ -192,4 +192,8 @@ It requires some information to define your repository.
 		]
 	}
 
-Currently, there is no authentication system for non-AWS repositories, but you can maintain a private repository by keeping the file-server only accessible on your local network.
+Currently, there is no support for managing and uploading to a self-hosted repository via the CollabXR Mod Packager, rather you will have to build the AssetBundles offline and upload them yourself, however if you only have a few datasets this may not be a problem.
+
+There is also no authentication system for non-AWS repositories, but you can maintain a private repository by keeping the file-server only accessible on your local network.
+
+We are open to extending support for non-AWS workflows, so consider :doc:`contributing<../contribution>`.
