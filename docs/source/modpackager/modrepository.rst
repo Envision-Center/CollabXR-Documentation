@@ -1,3 +1,5 @@
+.. _mod repositories:
+
 Mod Repositories
 =================
 This page is intended for end users who may want to host their own Collab mods in the cloud. While it does not require any programming knowledge, it does require an understanding of the file serving solution you choose, such as AWS.
@@ -183,8 +185,8 @@ It requires some information to define your repository.
 	{
 		"StructVersion": 1,
 		"BaseURL": "https://localhost/",
-		"RepoName": "Envision Center Internal Mods",
-		"RepoOwner": "Envision Center",
+		"RepoName": "My Mod Repository",
+		"RepoOwner": "My Name",
 		"Mods": [
 			"0098c7d1-5a49-46ae-ac4a-e8aa3b31e1a6",
 			"02b732be-abba-421d-95ca-98386b62e81b",

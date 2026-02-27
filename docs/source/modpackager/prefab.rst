@@ -1,3 +1,5 @@
+.. _making a mod:
+
 Making a Mod
 ============
 
@@ -10,19 +12,24 @@ so take bundle size into consideration when choosing how to organize your mod(s)
 .. _Prefabs: https://docs.unity3d.com/6000.0/Documentation/Manual/CreatingPrefabs.html
 
 Prefab Setup
-------------
+--------------------
 
 The top-level Transform for a prefab should always have a Box Collider that encapsulates the object.
 This allows users to grab and resize the object at will.
 
 Adding Functionality
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Additional functionality, like Toggle Controllers, Object Cyclers, and Passthrough Shaders can be added via the `Mod Extras`_ package. See the `Mod Extras`_ documentation for details.
+Additional functionality, like Toggle Controllers, Object Cyclers, and Passthrough Shaders can be added via the :ref:`Mod Extras packages<collab mod extras>`.
 
 .. _Mod Extras: modextras
 
 Custom Thumbnails
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Sometimes it is necessary to create a custom thumbnail for your Prefab (for example, if many Transforms are toggled off by default).
+
+Uploading
+--------------
+
+To upload your mod, you will need to add the CollabXR Mod Packager package to your project, and access to a :ref:`mod repository<mod repositories>`.

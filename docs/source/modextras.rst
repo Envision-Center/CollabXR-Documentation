@@ -1,3 +1,5 @@
+.. _collab mod extras:
+
 CollabXR Mod Extras
 ===============
 
