@@ -1,7 +1,5 @@
-.. _collab mod extras:
-
 CollabXR Mod Extras
-===============
+=====================
 
 The ``com.ecmodding.modextras`` package is used to include CollabXR-specific functionality in your projects, such as toggle controllers, object cyclers, and other utilites.
 

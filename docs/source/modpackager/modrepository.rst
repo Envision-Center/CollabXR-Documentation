@@ -1,7 +1,6 @@
-.. _mod repositories:
-
 Mod Repositories
 =================
+
 This page is intended for end users who may want to host their own Collab mods in the cloud. While it does not require any programming knowledge, it does require an understanding of the file serving solution you choose, such as AWS.
 
 If you are interested in collaborating with the Envision Center to visualize your data for research, education, or industry, please contact us `here <https://purdue.ca1.qualtrics.com/jfe/form/SV_2b0p3gqYpaiVLGS>`_.
