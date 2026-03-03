@@ -1,5 +1,3 @@
-.. _collab mod packager:
-
 CollabXR Mod Packager
 ===========================
 

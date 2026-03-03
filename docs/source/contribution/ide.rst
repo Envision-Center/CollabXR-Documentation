@@ -13,8 +13,7 @@ Zed
 
 To enable formatting with CSharpier, add this to your user or project settings file.
 
-.. code-block:: json
-	:caption: manifest.json
+	:caption: settings.json
 	:name: config-zed-csharpier
 
 	{
@@ -28,5 +27,5 @@ To enable formatting with CSharpier, add this to your user or project settings f
 					}
 				}
 			}
-		}
-	}
+
+A Zed configuration should already be included in the CollabXR repository.
