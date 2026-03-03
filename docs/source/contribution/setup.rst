@@ -69,8 +69,8 @@ If any issues arise, pre-commit will abort the commit, allowing you to add chang
 Playtesting
 ------------------
 
-Testing in Editor
-^^^^^^^^^^^^^^^^^^^^^
+Testing in Editor with the Simulator
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To simulate a Quest environment, we use the `Meta XR Simulator`_, which must be downloaded from their site.
 We typically use the **QuestDebug** Build Profile for testing both in-editor and outside of the editor, since it is the primary platform we develop for.
@@ -86,6 +86,17 @@ After connecting to a lobby, you can press B to open the spawn menu and tool sel
 You may need to disable one of the simulated controllers using the **Open Inputs > Global Input Settings** in order to open or interact with menus.
 
 .. _Meta XR Simulator: https://developers.meta.com/horizon/downloads/package/meta-xr-simulator/
+
+Testing in Editor with Meta Horizon Link
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the feature being tested does not require a true Quest environment (for example, it does not depend on mixed reality features such as depth or passthrough) the `Meta Horizon Link`_ app may be used in place of the simulator. Download and install this from their site.
+
+In the Meta Horizon Link desktop app, go to **Settings > General** and scroll to the bottom. Next to **OpenXR runtime** click **Set Meta Horizon Link as active**. Allow any following prompts.
+
+Ensure your Quest headset is connected with a USB 3.0 compatible port and cable. In the headset, enter Link mode from the Quick settings panel. Then, launch your app in Unity and your app should display in headset.
+
+.. _Meta Horizon Link : https://www.meta.com/help/quest/1517439565442928/
 
 Testing in Headset
 ^^^^^^^^^^^^^^^^^^^^^^^^
