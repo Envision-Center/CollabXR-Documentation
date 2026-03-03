@@ -15,6 +15,11 @@ Do not touch unrelated areas of the codebase when possible.
 Be mindful of adding dependencies such as Unity packages.
 Packages may slow down the build process and reduce portability.
 
+Avoid changing core Prefabs and Scenes in order to minimize merge conflicts.
+If you change an existing Prefab or Scene, explain your changes in the PR so maintainers know what changed.
+
+Always check your change list before you commit!
+
 Document Your Code
 ----------------------
 
