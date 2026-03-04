@@ -7,6 +7,8 @@ While not required, installing these tools and adhering to code style guidelines
 Recommended setup order:
 
 1. :ref:`Install Git LFS<section gitlfs>`
+2. :ref:`Set up DotNet runtime<section dotnet>`
+3. :ref:`Install pre-commit hooks<section pre-commit>`
 4. :ref:`Playtesting<section playtesting>`
 
 .. _CollabXR repository: https://github.com/Envision-Center
@@ -34,6 +36,8 @@ although some tools like CSharpier may not work with older SDK versions.
 
 1. Ensure the proper `dotnet`_ version is installed: ``$ dotnet --version``
 2. In the root directory of the `CollabXR repository`_, install the dotnet tool manifest: ``$ dotnet tool restore``
+3. Install corresponding plugins for your IDE as necessary (`CSharpier plugin list`_)
+
 Most IDEs support "format on save" operations, see :doc:`IDE specific setup<ide>`.
 If not automatically handled by your IDE, you can format using CSharpier at any time: ``$ dotnet csharpier .``
 
@@ -64,6 +68,7 @@ If any issues arise, pre-commit will abort the commit, allowing you to add chang
 
 .. _pre-commit: https://pre-commit.com/
 .. _use the beta version: https://desktop.github.com/beta/
+.. _alternative GUI client: https://git-scm.com/tools/guis
 .. _section playtesting:
 
 Playtesting
