@@ -9,5 +9,4 @@ It is recommended you have some understanding of Unity's `Asset Bundles`_ system
 
 .. toctree::
 
-	modpackager/prefab
 	modpackager/modrepository

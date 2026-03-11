@@ -142,6 +142,8 @@ In the IAM user, navigate to `Security credentials` and `Create access key`. For
 
 Please be aware that, since CollabXR is designed to be used by shared devices in an academic setting (i.e. many students and researchers sharing fleets of devices), there is currently no user identification to prevent others from loading your repository. Once you store the secret key on your device in the next section, it will be accessible to others using that device until you remove the repository from the list. While the keys are not stored in plaintext, they are not encrypted since they need to be accessible by anyone with physical access to the device. If this level of security is not sufficient for your use case, we encourage users to contact us or submit an issue further detailing your requirements.
 
+.. _loading-your-repository:
+
 Loading Your Repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
