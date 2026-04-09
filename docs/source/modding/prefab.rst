@@ -20,6 +20,31 @@ Adding Functionality
 
 Additional functionality, like Toggle Controllers, Object Cyclers, and Passthrough Shaders can be added via the :doc:`Mod Extras packages<../modextras>`.
 
+Publishing Your Mod
+-----------------------------
+
+Configuring the Asset Bundle
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Because CollabXR Mods are based on Unity AssetBundles, you need to add everything you want to package in to your mod (including all prefabs and assets) to an AssetBundle.
+To add an asset or prefab to an AssetBundle, click it in the ``Project`` window and open the ``Inspector`` window, and click the drop-down at the bottom labeled ``AssetBundle``.
+From there, you can select an existing AssetBundle or click ``New...`` to create one.
+The name is not permanent, and is only used inside of Unity, so feel free to give it a name that helps you.
+
+Uploading to AWS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To upload your mod, you will need to add the CollabXR Mod Packager package to your project, and access to a :doc:`mod repository<../modpackager/modrepository>`.
+
+Once the mod packager is installed, go to **CollabXR Modding Tools > Open Mod Packager** on the window toolbar.
+
+1. Authenticate with your repository (if necessary), then go to the **Mod Builder** tab.
+2. Select your target AssetBundle. The mod packager will reimport all assets to ensure a proper build.
+3. Find your desired Prefab(s) for spawning in CollabXR, and check the **Menu Object** box, before filling out the mod information (such as Category, which determines where in the Spawn Menu your prefab will appear).
+4. Once all prefabs are marked, select your target platforms on the bottom left.
+5. Finally, press **Build and Publish**. This will build the AssetBundles to ``Assets/Build/``, and upload them to the mod repository (if authenticated).
+6. You can refresh your mod list in CollabXR by going to **Settings > Mods**, or by just rejoining a room.
+
 Custom Thumbnails
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -31,17 +56,3 @@ Thumbnails should be imported to Unity as a 64x64 PNG image with the following i
 .. image:: /images/mod_thumbnail_import.png
 
 You can assign this texture to your prefab in the Mod Uploading window.
-
-Uploading
---------------
-
-To upload your mod, you will need to add the CollabXR Mod Packager package to your project, and access to a :doc:`mod repository<../modpackager/modrepository>`.
-
-Once the mod packager is installed, go to **CollabXR Modding Tools > Open Mod Packager** on the window toolbar.
-
-1. Authenticate with your repository (if necessary), then go to the **Mod Builder** tab.
-2. Select your target AssetBundle. The mod packager will reimport all the assets.
-3. Find your desired Prefab(s) and check the Menu Object box, before filling out the mod information.
-4. Once all prefabs are marked, select your target platforms on the bottom left.
-5. Finally, press **Build and Publish**. This will build the AssetBundles to ``Assets/Build/``, and upload them to the mod repository (if authenticated).
-6. You can refresh your mod list in CollabXR by going to **Settings > Mods**, or by just rejoining a room.

@@ -110,12 +110,3 @@ Build an APK using the **QuestDebug** Build Profile.
 You may need to install the `Meta Quest Developer Hub`_ to load the build onto a Quest headset.
 
 .. _Meta Quest Developer Hub: https://developers.meta.com/horizon/documentation/android-apps/meta-quest-developer-hub
-
-
-
-Additional Tools
---------------------
-
-.. toctree::
-
-	ide

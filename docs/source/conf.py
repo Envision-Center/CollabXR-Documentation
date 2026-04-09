@@ -39,5 +39,13 @@ html_favicon = "../static/favicon.ico"
 # Adding onto the theme css: https://docs.readthedocs.com/platform/stable/guides/adding-custom-css.html
 html_theme_options = {}
 
+html_context = {
+    "display_github": True,
+    "repository": "https://github.rcac.purdue.edu/EnvisionCenter/EnvisionCenterWiki",
+    "github_url": "https://github.rcac.purdue.edu/EnvisionCenter/EnvisionCenterWiki",
+    "branch": "master",
+    "conf_py_path": "/docs/source/",
+}
+
 # -- Options for EPUB output
 epub_show_urls = "footnote"
