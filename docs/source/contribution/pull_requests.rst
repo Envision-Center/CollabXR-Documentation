@@ -1,8 +1,8 @@
 Pull Request Guidelines
-=================
+=============================
 
 Keep Changes Small
------------------------
+--------------------------------
 
 Ideally, split up Pull Requests based on what they implement.
 A good rule-of-thumb is one Pull Request per bugfix or feature.

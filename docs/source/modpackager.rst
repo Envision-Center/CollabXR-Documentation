@@ -8,6 +8,7 @@ It is recommended you have some understanding of Unity's `Asset Bundles`_ system
 .. _Asset Bundles: https://docs.unity3d.com/6000.0/Documentation/Manual/AssetBundlesIntro.html
 
 .. toctree::
+	:maxdepth: 2
+	:glob:
 
-	modpackager/prefab
-	modpackager/modrepository
+	modpackager/*

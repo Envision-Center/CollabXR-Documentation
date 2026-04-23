@@ -1,8 +1,8 @@
 Shaders
-======
+=============
 
 Shader Parameter Driver
------------------------------
+-------------------------------
 
 MonoBehavior that automatically drives shader parameter inputs based on a referenced Transform. Can be used to more consistently animate shaders via animation or interaction.
 

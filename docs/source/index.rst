@@ -4,7 +4,7 @@ CollabXR Documentation
 
 `CollabXR`_ is a mixed-reality classroom.
 
-To get started with making mods, see the :doc:`making a mod tutorial<modpackager/prefab>`.
+To get started with making mods, see the :doc:`making a mod tutorial<modding/prefab>`.
 For hosting a mod repository, see :doc:`hosting a mod repository<modpackager/modrepository>`.
 For additional modding tools, see the :doc:`Collab ModExtras package<modextras>`.
 
@@ -20,7 +20,9 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
 
+   modding
    modpackager
    modextras
    contribution

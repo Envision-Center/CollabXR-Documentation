@@ -6,6 +6,7 @@ The ``com.ecmodding.modextras`` package is used to include CollabXR-specific fun
 As a rule of thumb, MonoBehaviors in this package should have tooltips to assist in understanding and working with components.
 
 .. toctree::
+	:maxdepth: 2
+	:glob:
 
-	modextras/measurement
-	modextras/shaders
+	modextras/*
