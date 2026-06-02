@@ -22,6 +22,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   collab
    modding
    modpackager
    modextras

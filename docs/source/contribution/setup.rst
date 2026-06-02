@@ -74,6 +74,21 @@ If any issues arise, pre-commit will abort the commit, allowing you to add chang
 Playtesting
 ------------------
 
+.. _section configure default room:
+
+Setting Developer Preferences
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order to minimize interference with other developers while testing, **we heavily advise setting your default room via Developer Preferences**.
+The "default room" is the lobby you enter when you press "Connect" on the main menu without adding a lobby ID or scanning a QR Code.
+
+To do this, first hit Play using the arrow at the top of the screen.
+This should automatically create an asset at ``Assets/Resources/Preferences/DeveloperPreferences.asset``.
+Stop the play mode, then change the "Default Room" field on that asset to something unique.
+
+You can optionally create a QR Code using the provided button, in order to create a print out you can scan at any time.
+The developer preferences only apply while testing in editor.
+
 Testing in Editor with the Simulator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -86,7 +101,7 @@ You should see a MetaXR simulator icon near the Play button. Click it so it turn
 .. image:: /images/metaxr_simulator_arm.png
 
 Open the ``Assets/Scenes/Menu.unity`` scene, and then press Play.
-This should drop you in the main menu for CollabXR.
+This should drop you in the main menu for CollabXR. Press "Connect" to enter into your `configured default room <section configure default room>`_.
 After connecting to a lobby, you can press B to open the spawn menu and tool selector.
 You may need to disable one of the simulated controllers using the **Open Inputs > Global Input Settings** in order to open or interact with menus.
 
