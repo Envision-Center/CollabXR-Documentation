@@ -6,7 +6,7 @@ It is **strongly recommended** to `set up your dev environment`_ before making c
 .. _set up your dev environment: contribution/setup.html
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 3
 	:glob:
 
 	contribution/setup

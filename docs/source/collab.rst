@@ -2,7 +2,7 @@ Using CollabXR
 ========================
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 3
 	:glob:
 
 	collab/setup
