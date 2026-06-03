@@ -18,7 +18,7 @@ The `Playback Director`_ has a number of public fields that can be configured in
 - `Sync Mode`: An enumerated value that determines how the Playback Director should handle syncing of the different Playback Components. The default value is `Scale Percent`, which means that all effects will be synced based on the percentage of the total duration that has elapsed. The other option is `Sync By Frame`, which means that the Playback Director will attempt to sync all effects based on their individual frame counts. The best option depends on the types of content you are trying to sync.
 
 Playback View Model
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 A MonoBehaviour that provides a data model for the UI to visualize the state of the `Playback Director`_.
 Once the `Playback Director`_ is added to your object, you should also add a `Playback View Model`_ component to the same GameObject from ``CollabXR.ModExtras``. **This component is required for proper visualisation in the UI, and must be on the same GameObject as the Playback Director.**
 
@@ -55,7 +55,7 @@ One feature of the `Animator Cycle Part`_ is the ability to switch between diffe
 - `Animations`: A list of Animation Clip Info structures, which include:
 
     - `Clip`: The Animation Clip to be played for this set.
-    - `State Name`: The name of the animation state to play for this set. **This field must correspond to an actual state in the Animation Controller corresponding to the specified clip.** If left blank, it will default to "DefaultState", which also must exist in the Animator Controller.
+    - `State Name`: The name of the animation state to play for this set. **This field must correspond to an actual state in the Animation Controller corresponding to the specified clip.**
     - `Layer`: The index of the Animator layer to play the animation on. This defaults to 0, which is the base layer of the Animator.
 
 When using the `Animator Cycle Part`_ during a CollabXR session, the user can switch between the different Animation Sets that you have configured in the inspector, where all specified animations in the set will be played together. This is especially useful if you have multiple animations to play on different layers, but take care that all your animations are of proper length relative to each other for proper visualisation.
@@ -71,7 +71,7 @@ To add an `Animation Audio Listener`_ to your prefab, add an "Animation Audio Li
 - `Volume`: The volume at which to play the clip for this event, which is a value between 0 and 1. This allows you to have different events play at different volumes if desired.
 
 .. note::
-    This component is not necessarily reliant on the Playback System, but is best used in context with the `Animator Cycle Part`_ To play one shot sounds during an animation.
+    This component is not necessarily reliant on the Playback System, but is best used in context with the `Animator Cycle Part`_ to play one-shot sounds during an animation.
 
 Material Cycle Part
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -85,7 +85,7 @@ A Playback Component that lets you scrub through an Audio Clip based on the curr
 
 .. note::
 
-    The Audio Cycle Part is used for continuous audio, and as such only works under the `Scale Percent` sync mode of the `Playback Director`_. It is not compatible with the `Sync By Frame` mode, as it does not have discrete frames to sync to. For event-based audio, use the `Audio Event Cycle Part`_ or the `Animation Audio Listener`_ instead.
+    The Audio Cycle Part is used for continuous audio, and as such only works under the `Scale Percent` sync mode of the `Playback Director`_. It is not recommended for use with the `Sync By Frame` mode, as it does not have discrete frames to sync to. For event-based audio, use the `Audio Event Cycle Part`_ or the `Animation Audio Listener`_ instead.
 
 To add an `Audio Cycle Part`_ to your prefab, add a child Transform, and then add an "Audio Cycle Part" component from ``CollabXR.ModExtras``. You can then assign an Audio Source and an Audio Clip to the corresponding fields in the inspector. The Audio Source will be used to play the audio clip during playback, and the clip will be scrubbed through based on the current time of the playback.
 
