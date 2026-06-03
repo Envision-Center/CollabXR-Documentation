@@ -59,3 +59,53 @@ One feature of the `Animator Cycle Part`_ is the ability to switch between diffe
     - `Layer`: The index of the Animator layer to play the animation on. This defaults to 0, which is the base layer of the Animator.
 
 When using the `Animator Cycle Part`_ during a CollabXR session, the user can switch between the different Animation Sets that you have configured in the inspector, where all specified animations in the set will be played together. This is especially useful if you have multiple animations to play on different layers, but take care that all your animations are of proper length relative to each other for proper visualisation.
+
+Animation Audio Listener
+""""""""""""""""""""""""""""""""""""""""
+A MonoBehaviour that listens for Animation Events on an Animator component and triggers audio clips based on those events.
+
+To add an `Animation Audio Listener`_ to your prefab, add an "Animation Audio Listener" component from ``CollabXR.ModExtras`` to the same GameObject as your Animator component. You can then populate the `Events` list with the audio events you want to trigger. Each event includes:
+
+- `Call Index`: An index corresponding to this clip. When adding an animation event to a clip, populate the integer field with the corresponding call index of the audio you want to play.
+- `Clip`: The Audio Clip to be played for this event.
+- `Volume`: The volume at which to play the clip for this event, which is a value between 0 and 1. This allows you to have different events play at different volumes if desired.
+
+.. note::
+    This component is not necessarily reliant on the Playback System, but is best used in context with the `Animator Cycle Part`_ To play one shot sounds during an animation.
+
+Material Cycle Part
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+A Playback Component that cycles through a list of Texture3Ds, applying one at a time to a specified Material based on the current time of the playback. This can be used to create simple frame-by-frame animations by swapping out textures on a material.
+
+To add a `Material Cycle Part`_ to your prefab, add a child Transform, and then add a "Material Cycle Part" component from ``CollabXR.ModExtras``. You can then assign a Mesh Renderer and populate the `Textures` list with the Texture3Ds you want to cycle through. The order of the Texture3Ds in the list determines the order in which they will be applied during playback. More info can be found in tooltips.
+
+Audio Cycle Part
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+A Playback Component that lets you scrub through an Audio Clip based on the current time of the playback. This can be used to sync audio tracks across playback of an animation, or independently as a simple way to scrub through audio.
+
+.. note::
+
+    The Audio Cycle Part is used for continuous audio, and as such only works under the `Scale Percent` sync mode of the `Playback Director`_. It is not compatible with the `Sync By Frame` mode, as it does not have discrete frames to sync to. For event-based audio, use the `Audio Event Cycle Part`_ or the `Animation Audio Listener`_ instead.
+
+To add an `Audio Cycle Part`_ to your prefab, add a child Transform, and then add an "Audio Cycle Part" component from ``CollabXR.ModExtras``. You can then assign an Audio Source and an Audio Clip to the corresponding fields in the inspector. The Audio Source will be used to play the audio clip during playback, and the clip will be scrubbed through based on the current time of the playback.
+
+Audio Event Cycle Part
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A Playback Component that lets you trigger one-shot audio clips based on the current frame of the playback. This can be used to play timed sound effects during an animation, or to create a simple step sequencer by triggering different clips on different frames.
+
+To add an `Audio Event Cycle Part`_ to your prefab, add a child Transform, and then add an "Audio Event Cycle Part" component from ``CollabXR.ModExtras``. You can then assign an Audio Source and populate the `Events` list with the audio events you want to trigger. Each event includes:
+
+- `Frame`: The frame of the playback at which to trigger this event. This is determined by the total number of frames in the playback, which is calculated based on the `Duration` field of the `Playback Director`_ and the frame rate of the playback (which is determined by the number of frames in the longest Animation Clip or Object Cycle Part, or can be set manually in the inspector). When the playback reaches this frame, the specified audio clip will be played once on the assigned Audio Source.
+- `Clip`: The Audio Clip to be played for this event.
+- `Volume`: The volume at which to play the clip for this event, which is a value between 0 and 1. This allows you to have different events play at different volumes if desired.
+
+Alternatively, you can use the `Animation Audio Listener`_ component to leverage Unity's Animation Event system to add events on animation clips as well.
+
+Playback Preview
+-------------------------------
+To test the playback of your animations and other content in the Unity Editor, you can use the `Playback Director`_'s Editor Window to simulate the playback of your content without having to enter Play mode or start a CollabXR session.
+
+To access the window, navigate to `CollabXR > Mod Extras > Playback Director` in the Unity Editor menu bar. This will open a window that allows you to control the playback of the content on a specified `Playback Director`_ component in the editor.
+
+In this editor, you can use the play, pause, and stop buttons to control the playback. You can also scrub through the playback using the timeline slider, and adjust the playback speed using the speed slider. You can also swap between animation sets here as well.
