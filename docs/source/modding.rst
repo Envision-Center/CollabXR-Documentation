@@ -14,5 +14,7 @@ You can also :ref:`load a repository<loading-your-repository>` (whether yours or
 	:maxdepth: 2
 	:glob:
 
+	modding/setup
 	modding/prefab
+	modding/bestpractices
 	modding/*
