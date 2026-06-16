@@ -16,12 +16,16 @@ Here are some tips on minimizing build size for the best CollabXR experience.
 User Experience
 --------------------------------
 
-- Consider the maximum and minimal scale when annotating your menu item for uploading. Do you need to see your prefab really small? Do you need to scale it to real-scale for extra detail?
+Users may expect certain functionality from a mod depending on the context.
+To minimize friction while interacting with your mod, make these considerations.
+
+- Fine-tune your collision box. Meeting the user's expectations of where you can and cannot grab or interact with a prefab will minimize confusion.
+- Consider the maximum and minimum scale when annotating your menu item for uploading. Do you need to see your prefab really small? Do you need to scale it to real-scale for extra detail?
 
 Packaging Speed
 --------------------------
 Due to the nature of Unity's asset management, with the needs of the Mod Packager, the mod packager can be very slow to work with.
-Here are some tips on how to minimize iteration time on your mods.
+Here are some tips on how to minimize iteration time with your mods.
 
 - Enabling `parallel asset imports`_ can reduce the amount of time spent re-importing assets.
 - Only have the Mod Packager window open when you are ready to build a mod. While open, it will listen for changes in the file system in order to re-import files and update its internal database, which can slow down your workflow.

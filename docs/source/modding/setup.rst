@@ -15,6 +15,8 @@ The patch number should not matter.
 .. _Unity 6000.0: https://unity.com/releases/editor/archive
 .. _Universal Render Pipeline: https://docs.unity.cn/6000.0/Documentation/Manual/universal-render-pipeline.html
 
+.. _installing-mod-packager:
+
 Installing Mod Packager
 -----------------------------
 
