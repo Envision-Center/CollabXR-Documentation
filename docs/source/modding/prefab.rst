@@ -20,6 +20,8 @@ Meshes, line renders, and even utilities like LOD Groups should work out-of-the-
 
 Specific components, like AnimationControllers or audio players may require use of certain :ref:`Mod Extras components <Adding Functionality>` in order to properly synchronize across clients.
 
+Once your Transform is set up, drag the GameObject into your Project window (the place with all the files) to save it as a prefab.
+
 .. _Adding Functionality:
 
 Adding Functionality
