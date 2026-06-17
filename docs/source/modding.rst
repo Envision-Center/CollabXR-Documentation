@@ -11,8 +11,10 @@ You can also :ref:`load a repository<loading-your-repository>` (whether yours or
 .. _Prefabs: https://docs.unity3d.com/6000.0/Documentation/Manual/CreatingPrefabs.html
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 3
 	:glob:
 
+	modding/setup
 	modding/prefab
+	modding/bestpractices
 	modding/*

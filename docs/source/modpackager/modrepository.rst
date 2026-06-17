@@ -170,6 +170,9 @@ Self-Hosting a Mod Repository
 
 Alternatively, you can host your own file server containing the mods and a manifest file.
 
+Mod Repository Manifest
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 The manifest file can be automatically generated, or built by hand.
 It requires some information to define your repository.
 
@@ -195,8 +198,40 @@ It requires some information to define your repository.
 		]
 	}
 
-Currently, there is no support for managing and uploading to a self-hosted repository via the CollabXR Mod Packager, rather you will have to build the AssetBundles offline and upload them yourself, however if you only have a few datasets this may not be a problem.
+Directory Structure
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There is also no authentication system for non-AWS repositories, but you can maintain a private repository by keeping the file-server only accessible on your local network.
+After :ref:`building a mod <building-offline>` and putting it in your mod repository, the actual directory layout would look something like this.
+Only a single directory is needed.
+
+.. image:: /images/mod_repository_file_server.png
+
+.. note::
+
+	You must manually add every included mod's UUID to the ``manifest.json`` file. This can be automated depending on your hosting solution.
+
+Hosting a File Server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can host a file server in a variety of ways. Here are some easy solutions for hosting on your own device.
+
+- Host using Python's `built-in http.server module <https://docs.python.org/3/library/http.server.html#command-line-interface>`_
+- Host the `http-server NPM package <https://www.npmjs.com/package/http-server>`_ through `NodeJS <https://nodejs.org/en>`_ (`from StackOverFlow <https://stackoverflow.com/a/16350826>`_)
+- Host the `@std/http JSR package <https://jsr.io/@std/http/doc/file-server>`_ through `Deno <https://deno.com/>`_ (this allows finer permission controls)
+- Write your own static file server using a simple web framework (this allows you to automate ``manifest.json`` creation)
+- Search the web for other "file server" solutions :)
+
+.. note::
+
+	The file server will be accessible from the IP address of whatever device you are hosting the server on.
+	If you want the mod repository to be accessible from outside your local network, you will have to use Port Forwarding or a VPN.
+
+Limitations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Currently, there is no support for managing and uploading to a self-hosted repository via the CollabXR Mod Packager.
+You will have to :ref:`build the AssetBundles offline <building-offline>` and upload them yourself, however if you only have a few datasets this may not be a problem.
+
+There is no authentication system for non-AWS repositories, but you can maintain a private repository by keeping the file-server only accessible on your local network.
 
 We are open to extending support for non-AWS workflows, so consider :doc:`contributing<../contribution>`.
