@@ -76,18 +76,23 @@ Project Setup
 
 Getting the Unity Project
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Clone the repository: https://github.com/Envision-Center/CollabXR
+1. Clone the `CollabXR repository`_.
 2. Setup git submodules. If cloned with Github Desktop, this has been done automatically. Otherwise, run ``$ git submodule update --init --recursive``.
 3. Add the project to Unity Hub and install the associated editor version. Include **Android Build Support**. 
 
 Getting Photon Fusion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Create a Photon account (required to download): https://www.photonengine.com/
-2. Download Photon Fusion 2.0.12: https://doc.photonengine.com/fusion/current/getting-started/sdk-download
-3. Download Fusion Physics 2.0.5: https://www.photonengine.com/sdks#fusion
-4. Download Unity Voice SDK 2.6.3: https://www.photonengine.com/sdks#voice
+1. Create a `Photon account`_ (required to download).
+2. Download `Photon Fusion 2.0.12`_
+3. Download `Fusion Physics 2.0.5`_
+4. Download `Unity Voice SDK 2.6.3`_
 
 You should now have 3 Unity package files.
+
+.. _Photon account: https://www.photonengine.com/
+.. _Photon Fusion 2.0.12: https://doc.photonengine.com/fusion/current/getting-started/sdk-download
+.. _Fusion Physics 2.0.5: https://www.photonengine.com/sdks#fusion
+.. _Unity Voice SDK 2.6.3 : https://www.photonengine.com/sdks#voice
 
 Resolving Errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -96,7 +101,7 @@ Resolving Errors
 3. You may get 1 or more MetaXR errors. Ignore the error about passthrough enabled. Anything else you may fix.
 
 Photon Fusion and API Keys
-^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Open the PUN Wizard via ``Window > Photon > Unity Networking > PUN Wizard``. Then, click PUN setup, and paste your **Photon App ID**.  
 2. You may also need to setup credentials for Cesium Ion, the Oculus Platform, and the OpenSky API
 3. Finally, open the Photon Fusion Hub via ``Tools > Fusion > Fusion Hub``. This should resolve any last errors you may have.
