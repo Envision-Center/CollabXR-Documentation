@@ -106,9 +106,10 @@ Resolving Errors
 Photon Fusion and API Keys
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Open the PUN Wizard via ``Window > Photon > Unity Networking > PUN Wizard``. Then, click PUN setup, and paste your **Photon App ID**.
-2. You may also need to setup credentials for Cesium Ion, the Oculus Platform, and the OpenSky API.
-3. Finally, open the Photon Fusion Hub via ``Tools > Fusion > Fusion Hub``. This should resolve any last errors you may have.
+1. In Photon App Settings, enter your **Fusion App ID** and **Voice App ID** into their respective fields.
+2. Open the PUN Wizard via ``Window > Photon > Unity Networking > PUN Wizard``. Then, click PUN setup, and paste your **Photon App ID**.
+3. You may also need to setup credentials for Cesium Ion, the Oculus Platform, and the OpenSky API.
+4. Finally, open the Photon Fusion Hub via ``Tools > Fusion > Fusion Hub``. This should resolve any last errors you may have.
 
 Playtesting
 ------------------
