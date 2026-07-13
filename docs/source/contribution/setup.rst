@@ -1,115 +1,13 @@
+=======================
 Developer Setup
-=================
-
-Consistent, clean, and readable code is important when making contributions in order to reduce friction between developers.
-While not required, installing these tools and adhering to code style guidelines is **strongly recommended** for a streamlined PR review process.
-
-Recommended setup order:
-
-1. :ref:`Install Git LFS<section gitlfs>`
-2. :ref:`Set up DotNet runtime<section dotnet>`
-3. :ref:`Install pre-commit hooks<section pre-commit>`
-4. :ref:`Playtesting<section playtesting>`
-
-.. _CollabXR repository: https://github.com/Envision-Center
-.. _section gitlfs:
-
-Git LFS
-----------
-
-Ensure `Git LFS`_ is installed in order to pull binary assets.
-
-After installing, run these commands in the root of your repository:
-
-1. ``$ git lfs install``
-2. ``$ git lfs pull``
-
-.. _Git LFS: https://git-lfs.com/
-
-.. _section dotnet:
-
-DotNet
-----------
-
-We recommended .NET SDK version 10, but anything support by .NET Standard 2.1 should be okay,
-although some tools like CSharpier may not work with older SDK versions.
-
-1. Ensure the proper `dotnet`_ version is installed: ``$ dotnet --version``
-2. In the root directory of the `CollabXR repository`_, install the dotnet tool manifest: ``$ dotnet tool restore``
-3. Install corresponding plugins for your IDE as necessary (`CSharpier plugin list`_)
-
-Most IDEs support "format on save" operations, see :doc:`IDE specific setup<ide>`.
-If not automatically handled by your IDE, you can format using CSharpier at any time: ``$ dotnet csharpier .``
-
-.. _dotnet: https://dotnet.microsoft.com/en-us/download/dotnet
-.. _CSharpier: https://csharpier.com/docs/About
-.. _CSharpier plugin list: https://csharpier.com/docs/Editors
-
-.. _section pre-commit:
-
-Pre-Commit Hooks
-------------------------
-
-`pre-commit`_ is used for formatting fixes and validation before making commits and pushing them.
-Their documentation provides a recommended installation method.
-
-.. note::
-
-	If you're working on Debian, pre-commit can be installed globally via apt: ``$ sudo apt install pre-commit``
-
-Once pre-commit is installed on your system, you can set it up within the root directory of the `CollabXR repository`_: ``$ pre-commit install``
-
-Now, any time you make a commit, pre-commit should fix any formatting or whitespace issues before the commit is made.
-If any issues arise, pre-commit will abort the commit, allowing you to add changes before committing again.
-
-.. note::
-
-	If you're using GitHub Desktop, you may need to `use the beta version`_ for proper commit hooks support (if it works). Or, we recommend using an `alternative GUI client`_ like GitKraken (free version).
-
-.. _pre-commit: https://pre-commit.com/
-.. _use the beta version: https://desktop.github.com/beta/
-.. _alternative GUI client: https://git-scm.com/tools/guis
-.. _section playtesting:
+=======================
 
 Project Setup
----------------------------------
+-----------------------
 
-Getting the Unity Project
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Follow the :doc:`Building CollabXR guide <../collab/building>` to get the initial Unity project set up.
 
-1. Clone the `CollabXR repository`_.
-2. Setup git submodules. If cloned with Github Desktop, this has been done automatically. Otherwise, run ``$ git submodule update --init --recursive``.
-3. Add the project to Unity Hub and install the associated editor version. Include **Android Build Support**.
-
-Getting Photon Fusion
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-1. Create a `Photon account`_ (required to download).
-2. Download `Photon Fusion 2.0.12`_.
-3. Download `Fusion Physics 2.0.5`_.
-4. Download `Unity Voice SDK 2.6.3`_.
-
-You should now have 3 Unity package files.
-
-.. _Photon account: https://www.photonengine.com/
-.. _Photon Fusion 2.0.12: https://doc.photonengine.com/fusion/current/getting-started/sdk-download
-.. _Fusion Physics 2.0.5: https://www.photonengine.com/sdks#fusion
-.. _Unity Voice SDK 2.6.3 : https://www.photonengine.com/sdks#voice
-
-Resolving Errors
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-1. Open the Unity Project in **unsafe mode**.
-2. Go to ``Assets > Import Package > Custom Package``. Then add the 3 Photon Unity Package Files one at a time. Approve any "Script Updating Consent" windows that appear in this step.
-3. You may get 1 or more MetaXR errors. Ignore the error about passthrough enabled. Anything else you may fix.
-
-Photon Fusion and API Keys
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-1. In Photon App Settings, enter your **Fusion App ID** and **Voice App ID** into their respective fields.
-2. Open the PUN Wizard via ``Window > Photon > Unity Networking > PUN Wizard``. Then, click PUN setup, and paste your **Photon App ID**.
-3. You may also need to setup credentials for Cesium Ion, the Oculus Platform, and the OpenSky API.
-4. Finally, open the Photon Fusion Hub via ``Tools > Fusion > Fusion Hub``. This should resolve any last errors you may have.
+.. _section playtesting:
 
 Playtesting
 ------------------
@@ -165,3 +63,54 @@ Build an APK using the **QuestDebug** Build Profile.
 You may need to install the `Meta Quest Developer Hub`_ to load the build onto a Quest headset.
 
 .. _Meta Quest Developer Hub: https://developers.meta.com/horizon/documentation/android-apps/meta-quest-developer-hub
+
+
+Continuous Integration
+--------------------------
+
+Consistent, clean, and readable code is important when making contributions in order to reduce friction between developers.
+While not required, installing these tools and adhering to code style guidelines is **strongly recommended** for a streamlined PR review process.
+
+.. _section dotnet:
+
+DotNet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We recommended .NET SDK version 10, but anything support by .NET Standard 2.1 should be okay,
+although some tools like CSharpier may not work with older SDK versions.
+
+1. Ensure the proper `dotnet`_ version is installed: ``$ dotnet --version``
+2. In the root directory of the CollabXR repository, install the dotnet tool manifest: ``$ dotnet tool restore``
+3. Install corresponding plugins for your IDE as necessary (`CSharpier plugin list`_)
+
+Most IDEs support "format on save" operations, see :doc:`IDE specific setup<ide>`.
+If not automatically handled by your IDE, you can format using CSharpier at any time: ``$ dotnet csharpier .``
+
+.. _dotnet: https://dotnet.microsoft.com/en-us/download/dotnet
+.. _CSharpier: https://csharpier.com/docs/About
+.. _CSharpier plugin list: https://csharpier.com/docs/Editors
+
+.. _section pre-commit:
+
+Pre-Commit Hooks
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`pre-commit`_ is used for formatting fixes and validation before making commits and pushing them.
+Their documentation provides a recommended installation method.
+
+.. note::
+
+	If you're working on Debian, pre-commit can be installed globally via apt: ``$ sudo apt install pre-commit``
+
+Once pre-commit is installed on your system, you can set it up within the root directory of the CollabXR repository: ``$ pre-commit install``
+
+Now, any time you make a commit, pre-commit should fix any formatting or whitespace issues before the commit is made.
+If any issues arise, pre-commit will abort the commit, allowing you to add changes before committing again.
+
+.. note::
+
+	If you're using GitHub Desktop, you may need to `use the beta version`_ for proper commit hooks support (if it works). Or, we recommend using an `alternative GUI client`_ like GitKraken (free version).
+
+.. _pre-commit: https://pre-commit.com/
+.. _use the beta version: https://desktop.github.com/beta/
+.. _alternative GUI client: https://git-scm.com/tools/guis
