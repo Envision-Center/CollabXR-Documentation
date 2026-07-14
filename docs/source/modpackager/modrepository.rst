@@ -7,9 +7,12 @@ If you are interested in collaborating with the Envision Center to visualize you
 
 About Mod Repositories
 ------------------------------
-Mod repositories are the location in the cloud that CollabXR mod files are stored. In most cases, CollabXR expects a static, public file server containing Unity Assetbundles and their associated metadata in JSON format.
+Mod repositories are the location in the cloud that CollabXR mod files are stored.
+In most cases, CollabXR expects a static, public file server containing Unity Assetbundles and their associated metadata in JSON format.
 
-CollabXR was designed to be used with Amazon AWS for hosting mod repositories. It is recommended to use AWS S3 for filehosting, AWS Lambda to autogenerate repository listings, and AWS Cognito for upload authentication. However, it does support simple `self-hosting`_.
+**CollabXR was designed to be used with Amazon AWS for hosting mod repositories**.
+It is recommended to use AWS S3 for filehosting, AWS Lambda to autogenerate repository listings, and AWS Cognito for upload authentication.
+However, **CollabXR does support simple** :ref:`self-hosted file servers <self-hosting>`, with some :ref:`limitations <file-server-limitations>`.
 
 Creating a Mod Repository with AWS
 -------------------------------------
@@ -226,10 +229,12 @@ You can host a file server in a variety of ways. Here are some easy solutions fo
 	The file server will be accessible from the IP address of whatever device you are hosting the server on.
 	If you want the mod repository to be accessible from outside your local network, you will have to use Port Forwarding or a VPN.
 
-Limitations
+.. _file-server-limitations:
+
+File-Server Limitations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently, there is no support for managing and uploading to a self-hosted repository via the CollabXR Mod Packager.
+Currently, there is no support for managing and uploading mods to a self-hosted repository via the CollabXR Mod Packager.
 You will have to :ref:`build the AssetBundles offline <building-offline>` and upload them yourself, however if you only have a few datasets this may not be a problem.
 
 There is no authentication system for non-AWS repositories, but you can maintain a private repository by keeping the file-server only accessible on your local network.

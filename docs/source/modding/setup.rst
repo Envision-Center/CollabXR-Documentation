@@ -15,7 +15,7 @@ The patch number should not matter.
 .. _Unity 6000.0: https://unity.com/releases/editor/archive
 .. _Universal Render Pipeline: https://docs.unity.cn/6000.0/Documentation/Manual/universal-render-pipeline.html
 
-.. _installing-mod-packager:
+.. _configure-unity-for-xr-shaders:
 
 Configure Unity for XR
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -28,12 +28,14 @@ Without this step, you may notice odd, unintended behavior with your mods, such 
 This is because CollabXR is an XR application, and XR rendering differs from traditional rendering in some ways.
 To fix these issues, you must add XR to your Unity project.
 
-1. Add the `Meta XR SDK package`_` from the Unity Asset Store.
+1. Add the `Meta XR SDK package`_ from the Unity Asset Store.
 2. Add the Oculus XR Plugin (should be searchable in the Unity Package Registry in editor).
 3. In ``Project Settings > XR Plug-in Management > Android Settings``, check the box with ``Oculus`` in Plug-in providers.
 4. Fix any remaining outstanding issues that the Meta XR Tools window prompts you to.
 
 .. _Meta XR SDK package: https://assetstore.unity.com/packages/sdk/meta-xr-sdk-9022845
+
+.. _installing-mod-packager:
 
 Installing Mod Packager
 -----------------------------
