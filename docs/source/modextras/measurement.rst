@@ -4,7 +4,7 @@ Measurement
 The Mod Extras package provides additional tools for measurement and visual communication of scale.
 These come in the form of MonoBehaviors that can be appended to your GameObject.
 
-**It is recommended that these MonoBehaviors are put on individual Transforms that are added to a toggle controllers,**
+**It is recommended that these MonoBehaviors are put on individual Transforms that are added to a** :doc:`Toggle Controller <togglecontroller>`,
 in case they need to be hidden during instructional use.
 
 .. note::

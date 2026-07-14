@@ -27,10 +27,17 @@ Once your Transform is set up, drag the GameObject into your Project window (the
 Adding Functionality
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Additional functionality, like Toggle Controllers, Object Cyclers, and Passthrough Shaders can be added via the :doc:`Mod Extras packages<../modextras>`.
+Additional functionality, like :doc:`animation playback <../modextras/playbacksystem>` and :doc:`object toggling <../modextras/togglecontroller>` can be added via the :doc:`Mod Extras package<../modextras>`.
+
+For a more refined experience, be sure to set up your :doc:`materials <materials>` in a compatible manner.
 
 Publishing Your Mod
 -----------------------------
+
+.. note::
+
+	In order to publish your mod, you will need access to a :doc:`Mod Repository <../modpackager/modrepository>`.
+	If you do not have access to one, you can :doc:`host your own <../modpackager/modrepository>`.
 
 Configuring the Asset Bundle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -70,6 +77,8 @@ Once the :ref:`mod packager is installed <installing-mod-packager>`, go to **Col
 5. Press **Build Offline**. This will build the AssetBundles and metadata to ``Assets/Build/`` directory. You will need to copy these files into your mod repository.
 6. In your mod repository, update the ``manifest.json`` file to include the UUID of your new mod. The mod UUID is both listed both in the name of the built ``.meta.json`` file and inside of it.
 7. You can refresh your mod list in CollabXR by going to **Settings > Mods**, or by just rejoining a room.
+
+.. _custom-thumbnails:
 
 Custom Thumbnails
 ^^^^^^^^^^^^^^^^^^^^^^^^^

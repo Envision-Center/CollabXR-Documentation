@@ -16,5 +16,6 @@ You can also :ref:`load a repository<loading-your-repository>` (whether yours or
 
 	modding/setup
 	modding/prefab
+	modding/materials
 	modding/bestpractices
 	modding/*
