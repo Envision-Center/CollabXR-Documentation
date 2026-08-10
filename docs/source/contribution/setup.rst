@@ -18,7 +18,7 @@ Setting Developer Preferences
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to minimize interference with other developers while testing, **we heavily advise setting your default room via Developer Preferences**.
-The "default room" is the lobby you enter when you press "Connect" on the main menu without adding a lobby ID or scanning a QR Code.
+The "default room" is the room you enter when you press "Connect" on the main menu without adding a room ID or scanning a QR Code.
 
 To do this, first hit Play using the arrow at the top of the screen.
 This should automatically create an asset at ``Assets/Resources/Preferences/DeveloperPreferences.asset``.
@@ -40,7 +40,7 @@ You should see a MetaXR simulator icon near the Play button. Click it so it turn
 
 Open the ``Assets/Scenes/Menu.unity`` scene, and then press Play.
 This should drop you in the main menu for CollabXR. Press "Connect" to enter into your `configured default room <section configure default room>`_.
-After connecting to a lobby, you can press B to open the spawn menu and tool selector.
+After connecting to a room, you can press B to open the spawn menu and tool selector.
 You may need to disable one of the simulated controllers using the **Open Inputs > Global Input Settings** in order to open or interact with menus.
 
 .. _Meta XR Simulator: https://developers.meta.com/horizon/downloads/package/meta-xr-simulator/
