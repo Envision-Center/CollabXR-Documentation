@@ -13,7 +13,7 @@ Development
 1.  Create a virtual Python environment: ``python3 -m venv .venv/``
 2. Enter virtual environment: ``source .venv/bin/activate`` (or ``.\.venv\Scripts\activate.bat`` if on Windows)
 3. Install dependencies: ``pip install -r docs/requirements.txt``
-4. Optionally install esbonio language server for Sphnix (preferablly global): ``pip install esobnio``
+4. Optionally install esbonio language server for Sphnix (preferablly global): ``pip install esbonio``
 5. Install Prettier for auto-formatting configs: ``npm i -g prettier``
 6. Setup pre-commit hooks for code cleanliness: ``pre-commit install``
 
