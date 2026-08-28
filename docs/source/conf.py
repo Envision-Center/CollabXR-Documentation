@@ -41,9 +41,9 @@ html_theme_options = {}
 
 html_context = {
     "display_github": True,
-    "repository": "https://github.rcac.purdue.edu/EnvisionCenter/EnvisionCenterWiki",
-    "github_url": "https://github.rcac.purdue.edu/EnvisionCenter/EnvisionCenterWiki",
-    "branch": "master",
+    "github_user": "Envision-Center",
+    "github_repo": "CollabXR-Documentation",
+    "github_version": "main",
     "conf_py_path": "/docs/source/",
 }
 
