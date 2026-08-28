@@ -1,5 +1,0 @@
-{% extends "!layout.html" %} {% block rootrellink %} {% if display_github %}
-<li>
-	<a href="{{ repository }}/edit/{{ branch }}{{ conf_py_path }}{{ pagename }}.rst">Edit Page</a>
-</li>
-{% endif %} {{ super() }} {% endblock %}
