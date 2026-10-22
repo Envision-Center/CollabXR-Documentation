@@ -4,6 +4,7 @@ CollabXR Documentation
 
 `CollabXR`_ is a mixed-reality classroom.
 
+- For installing CollabXR and setting a classroom, see the :doc:`application setup guide <collab/setup>`.
 - To get started with making mods, see the :doc:`preparing for mod creation <modding/setup>` and :doc:`making a mod <modding/prefab>` tutorials.
 - For hosting a mod repository, see :doc:`hosting a mod repository <modpackager/modrepository>`.
 - For additional modding tools, see the :doc:`Collab ModExtras package <modextras>`.
