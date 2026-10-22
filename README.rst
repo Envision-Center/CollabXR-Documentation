@@ -27,5 +27,7 @@ Resources
 ======
 
 * `reStructuredText Docs`_
+* `Documatt on Inline-Images`_
 
 .. _reStructuredText Docs: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+.. _Documatt on Inline-Images: https://documatt.com/restructuredtext-reference/element/inline-image.html

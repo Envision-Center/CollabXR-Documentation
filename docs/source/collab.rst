@@ -8,4 +8,5 @@ Guides for users on getting started with CollabXR.
 	:glob:
 
 	collab/setup
+	collab/controls
 	collab/building
