@@ -108,6 +108,8 @@ You can hide the |context| Context menu by pressing the |menu| Menu button.
 
 .. image:: /images/collab/controls/context_menu.jpg
 
+.. _section linker tool:
+
 |linker| Linker
 ^^^^^^^^^^^^^^^^^^^^^^
 
