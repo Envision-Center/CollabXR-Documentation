@@ -2,6 +2,9 @@
 Application Setup
 ============================
 
+.. |menu| image:: /images/icons/menu.svg
+.. |colocate| image:: /images/icons/colocate.svg
+
 This covers everything you need from installing CollabXR, to creating and joining your own classroom.
 If you are trying to playtest a developer build, see :ref:`Playtesting <section playtesting>`.
 
@@ -56,6 +59,8 @@ Joining a Room
 
 Once the application is open, you should see a menu that says "Join a Classroom."
 
+.. image:: /images/collab/setup/join_a_classroom.jpg
+
 .. note::
 
 	Joining a room without changing your Photon App IDs will place you in a room using the Envision Center's development API keys.
@@ -97,19 +102,23 @@ To do this, follow the below instructions:
 1. `Create a Photon account <https://www.photonengine.com/>`_
 2. Create both a Photon Fusion and a Photon Voice app. Apps in the development cloud are free for development and testing and work with up to 20 concurrent users.
 3. Obtain the App ID for each as shown in the image below.
+
+.. image:: /images/collab/setup/photon_fusion_appid.png
+
 4. If you plan to use CollabXR on a Meta Quest, create a separate QR code for each using any online QR code generator.
 5. Open CollabXR, navigate to the Settings tab on the bottom bar, and then Networking.
 6. Enable the "Use Custom Photon App ID" switch.
 7. Press the QR icon next to each field to scan a QR code, or enter the IDs manually.
 8. Your App IDs will be saved automatically to the headset, and you may continue on to :ref:`joining a room <section joining room>`.
 
-From now on, when you launch CollabXR you will be using these custom App IDs. Any user you intend to connect to will also need to be using these App IDs.
+.. image:: /images/collab/setup/network_settings.jpg
 
-.. image:: /images/photon_fusion_appid.png
+From now on, when you launch CollabXR you will be using these custom App IDs.
+**Any user you intend to connect to will also need to be using these App IDs.**
 
 .. _section colocation:
 
-Colocation
+|colocate| Colocation
 -----------------------
 
 **"Colocation" is a state where multiple devices are tied to the same shared, collaborative space.**
@@ -134,8 +143,8 @@ Devices can sometimes "drift" and lose their colocation due to poor tracking, la
 You can tell if a user is not co-located because the "User" tag above their head will be offset or not be visible, and they will not see objects in the same position as you do.
 This can be fixed by re-scanning the QR Code while inside the room.
 
-1. Open the menu using the bottom button on your Quest controller
-2. On the bottom bar, select the "Colocate" tab with the QR Code icon
+1. Open the menu using the red |menu| Menu button on your Quest controller
+2. On the bottom bar, select the |colocate| Colocate button
 3. Stand next to your QR Code and look directly at it
 
 If the colocation was successful, you should see the axis arrows re-appear on top of the QR Code.
