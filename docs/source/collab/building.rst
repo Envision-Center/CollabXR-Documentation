@@ -1,5 +1,8 @@
-Building CollabXR
-==========================
+Building CollabXR from Source
+=====================================
+
+.. |menu| image:: /images/icons/menu.svg
+.. |colocate| image:: /images/icons/colocate.svg
 
 If you would like to use CollabXR for large-scale or secure applications, you may need to recompile it with your own API keys.
 
