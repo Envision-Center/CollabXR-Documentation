@@ -6,8 +6,8 @@ project = "CollabXR Documentation"
 copyright = "2026, Purdue University Envision Center"
 author = "Purdue University Envision Center"
 
-release = "1.2"
-version = "1.2.4"
+release = "1.3"
+version = "1.3.0"
 
 # -- General configuration
 
