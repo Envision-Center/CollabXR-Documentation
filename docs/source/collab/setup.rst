@@ -28,7 +28,7 @@ Connecting to the Internet
 --------------------------------
 
 CollabXR requires a stable internet connection.
-Before starting CollabXR, ensure your device has a working Wi-Fi connection.
+Before starting CollabXR, ensure your device has a working Wi-Fi connection and access to the internet.
 
 - `Connect your Meta Quest headset to Wi-Fi <https://www.meta.com/en-gb/help/quest/1816744325172615/>`_
 - `Troubleshoot joining a Wi-Fi network on Meta Quest <https://www.meta.com/en-gb/help/quest/517103729284781/>`_
@@ -114,37 +114,5 @@ To do this, follow the below instructions:
 .. image:: /images/collab/setup/network_settings.jpg
 
 From now on, when you launch CollabXR you will be using these custom App IDs.
+Note that this must be done once per headset.
 **Any user you intend to connect to will also need to be using these App IDs.**
-
-.. _section colocation:
-
-|colocate| Colocation
------------------------
-
-**"Colocation" is a state where multiple devices are tied to the same shared, collaborative space.**
-This is key to the instructional aspect of CollabXR, where interactions in both a physical space *and* digital space can work together.
-
-Colocation and QR Codes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-QR Codes are useful for colocating, as they define a position and orientation in 3D space in a way that most devices can understand.
-For the best experience, it is recommended to follow these practices when using QR Codes.
-
-- Always place your QR Code flat on the floor
-- Do not move the QR Code after connecting to a room
-- With the above two in mind, place your QR Code in a spot where it is unlikely to be stepped on
-- Ensure your QR Code is large enough to be clearly visible on camera
-- Ensure your QR Code is in bright lighting
-
-Colocating while in a Room
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Devices can sometimes "drift" and lose their colocation due to poor tracking, latency, or the device falling asleep.
-You can tell if a user is not co-located because the "User" tag above their head will be offset or not be visible, and they will not see objects in the same position as you do.
-This can be fixed by re-scanning the QR Code while inside the room.
-
-1. Open the menu using the red |menu| Menu button on your Quest controller
-2. On the bottom bar, select the |colocate| Colocate button
-3. Stand next to your QR Code and look directly at it
-
-If the colocation was successful, you should see the axis arrows re-appear on top of the QR Code.

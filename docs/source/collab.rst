@@ -9,4 +9,5 @@ Guides for users on getting started with CollabXR.
 
 	collab/setup
 	collab/controls
+	collab/troubleshooting
 	collab/building

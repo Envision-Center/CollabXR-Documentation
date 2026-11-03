@@ -88,6 +88,8 @@ Drawing multiple strokes on top of each other will cause them to combine, allowi
 
 The |erase| Brush Eraser tool allows you to erase drawings when holding the Trigger and swiping it through a drawn stroke.
 
+.. _section teleporter:
+
 |walk| Teleporter
 ^^^^^^^^^^^^^^^^^^^^
 
